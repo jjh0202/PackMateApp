@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 와이어프레임 톤(흑백) -->
+    <color name="screen_background">#FFFFFFFF</color>
+    <color name="text_primary">#FF222222</color>
+    <color name="text_secondary">#FF666666</color>
+    <color name="text_hint">#FF999999</color>
+    <color name="text_packed">#FF9E9E9E</color>
+    <color name="border_dark">#FF333333</color>
+    <color name="border_light">#FF555555</color>
+    <color name="border_dashed">#FF888888</color>
+    <color name="divider">#FFBBBBBB</color>
+    <color name="button_fill">#FFDDDDDD</color>
+    <color name="fab_fill">#FFEEEEEE</color>
+    <color name="progress_fill">#FF999999</color>
+    <color name="progress_track">#FFFFFFFF</color>
+    <color name="emoji_selected">#FFDDDDDD</color>
+</resources>

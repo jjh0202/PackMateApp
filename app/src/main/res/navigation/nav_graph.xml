@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- docs/navigation_flow.png 흐름과 동일 -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tripListFragment">
+
+    <fragment
+        android:id="@+id/tripListFragment"
+        android:name="com.example.packmateapp.ui.trip.TripListFragment"
+        android:label="@string/label_trip_list"
+        tools:layout="@layout/fragment_trip_list">
+        <action
+            android:id="@+id/action_tripListFragment_to_tripAddFragment"
+            app:destination="@id/tripAddFragment" />
+        <action
+            android:id="@+id/action_tripListFragment_to_packingListFragment"
+            app:destination="@id/packingListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tripAddFragment"
+        android:name="com.example.packmateapp.ui.trip.TripAddFragment"
+        android:label="@string/label_trip_add"
+        tools:layout="@layout/fragment_trip_add" />
+
+    <fragment
+        android:id="@+id/packingListFragment"
+        android:name="com.example.packmateapp.ui.packing.PackingListFragment"
+        android:label="@string/label_packing_list"
+        tools:layout="@layout/fragment_packing_list">
+        <argument
+            android:name="tripId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_packingListFragment_to_itemAddFragment"
+            app:destination="@id/itemAddFragment" />
+        <action
+            android:id="@+id/action_packingListFragment_to_packCompleteFragment"
+            app:destination="@id/packCompleteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemAddFragment"
+        android:name="com.example.packmateapp.ui.packing.ItemAddFragment"
+        android:label="@string/label_item_add"
+        tools:layout="@layout/fragment_item_add">
+        <argument
+            android:name="tripId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/packCompleteFragment"
+        android:name="com.example.packmateapp.ui.complete.PackCompleteFragment"
+        android:label="@string/label_pack_complete"
+        tools:layout="@layout/fragment_pack_complete">
+        <argument
+            android:name="tripId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+</navigation>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_light"
+    app:strokeWidth="1.5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_emoji"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_emoji_circle"
+            android:gravity="center"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="✈️" />
+
+        <TextView
+            android:id="@+id/tv_dday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dday_badge"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="D-54" />
+
+        <TextView
+            android:id="@+id/tv_trip_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tv_dday"
+            app:layout_constraintStart_toEndOf="@id/tv_emoji"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="제주도 여행" />
+
+        <TextView
+            android:id="@+id/tv_trip_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_trip_name"
+            app:layout_constraintStart_toStartOf="@id/tv_trip_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_trip_name"
+            tools:text="제주 · 12/20 출발 · 3일" />
+
+        <ProgressBar
+            android:id="@+id/progress_trip"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="8dp"
+            android:progressDrawable="@drawable/bg_progress"
+            app:layout_constraintEnd_toEndOf="@id/tv_trip_name"
+            app:layout_constraintStart_toStartOf="@id/tv_trip_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_trip_info"
+            tools:max="10"
+            tools:progress="7" />
+
+        <TextView
+            android:id="@+id/tv_trip_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_trip_name"
+            app:layout_constraintStart_toStartOf="@id/tv_trip_name"
+            app:layout_constraintTop_toBottomOf="@id/progress_trip"
+            tools:text="7 / 10 챙김" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
